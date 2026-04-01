@@ -21,7 +21,7 @@
             background-attachment: fixed;
         }
 
-        /* Fundos Dinâmicos */
+        /* Fundos Dinâmicos baseados nos arquivos do seu repositório */
         @media (min-width: 769px) {
             body { background-image: url('fundo-computador.png.png') !important; }
         }
@@ -29,20 +29,20 @@
             body { background-image: url('fundo-celular.png.png') !important; }
         }
 
-        /* CONTAINER ATUALIZADO: Fundo preto transparente e sombra profissional */
+        /* Cartão Central (Fundo Preto com transparência mantido conforme anterior) */
         .container { 
-            background: rgba(0, 0, 0, 0.8); 
+            background: rgba(0, 0, 0, 0.82); 
             width: 100%; 
             max-width: 400px;
             border-radius: 25px; 
             padding: 45px 25px; 
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Foto de Perfil */
+        /* Perfil */
         .perfil-foto-container {
             width: 100px; height: 100px;
             margin: 0 auto 15px auto;
@@ -57,7 +57,7 @@
             display: block;
         }
 
-        /* TEXTOS ATUALIZADOS: Maiúsculas e Negrito */
+        /* Textos: MYSTAGOGUS.33 e CANAL DE MITOLOGIA */
         h2 { 
             margin-bottom: 5px; 
             color: #fff; 
@@ -75,23 +75,25 @@
             letter-spacing: 1.5px;
         }
 
-        /* Lista de Links Organizada */
+        /* --- AJUSTE DE ALINHAMENTO E SIMETRIA DOS BOTÕES --- */
         .links {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            width: 100%;
         }
 
+        /* Botões em PRETO sólido e Letras em BRANCO */
         .link-card {
-            display: flex; 
+            display: grid; /* Grid garante alinhamento fixo das colunas */
+            grid-template-columns: 40px 1fr 40px; /* Colunas para ícone, texto e espaço vazio lateral */
             align-items: center; 
-            justify-content: center;
-            background: #fff; 
-            border: 1px solid #e5e7eb;
+            background: #000; /* PRETO sem transparência conforme solicitado */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil para contraste */
             padding: 14px; 
             border-radius: 12px;
             text-decoration: none; 
-            color: #111; 
+            color: #fff; /* LETRAS BRANCAS conforme solicitado */
             font-weight: 800; 
             text-transform: uppercase; 
             letter-spacing: 1px;
@@ -102,21 +104,27 @@
         .link-card:hover { 
             transform: translateY(-3px); 
             box-shadow: 0 8px 20px rgba(255,255,255,0.1);
-            background: #fdfdfd;
+            background: #111; /* Leve mudança no hover */
         }
         
+        /* Ícones Fixos e Alinhados */
         .icone-container {
             width: 28px; height: 28px;
             display: flex; 
             align-items: center; 
             justify-content: center;
-            margin-right: 12px;
-            flex-shrink: 0;
+            grid-column: 1; /* Força o ícone na primeira coluna */
         }
         .icone-container img {
             width: 100%; height: 100%;
             object-fit: contain;
             display: block;
+        }
+        
+        /* Centraliza o texto do botão na coluna do meio */
+        .texto-link {
+            grid-column: 2;
+            text-align: center;
         }
         
         audio { display: none; }
@@ -139,22 +147,28 @@
 
         <div class="links">
             <a href="https://www.youtube.com/@MYSTAGOGUS.33" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-youtube.png.png"></span> YOUTUBE
+                <span class="icone-container"><img src="icone-youtube.png.png"></span>
+                <span class="texto-link">YOUTUBE</span>
             </a>
             <a href="https://www.instagram.com/mystagogus.oficial/" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-instagram.png.png"></span> INSTAGRAM
+                <span class="icone-container"><img src="icone-instagram.png.png"></span>
+                <span class="texto-link">INSTAGRAM</span>
             </a>
             <a href="https://www.tiktok.com/@mystagogus.33?_t=zm-8wc5bjly3pv&_r=1" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-tiktok.png.png"></span> TIKTOK
+                <span class="icone-container"><img src="icone-tiktok.png.png"></span>
+                <span class="texto-link">TIKTOK</span>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61585818361463" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-facebook.png.png"></span> FACEBOOK
+                <span class="icone-container"><img src="icone-facebook.png.png"></span>
+                <span class="texto-link">FACEBOOK</span>
             </a>
             <a href="https://www.whatsapp.com/channel/0029Vb67Cr5GehEP6aKhr61j" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-whatsapp.png.png"></span> WHATSAPP
+                <span class="icone-container"><img src="icone-whatsapp.png.png"></span>
+                <span class="texto-link">WHATSAPP</span>
             </a>
             <a href="https://t.me/MYSTAGOGUS33" target="_blank" class="link-card">
-                <span class="icone-container"><img src="icone-telegram.png.png"></span> TELEGRAM
+                <span class="icone-container"><img src="icone-telegram.png.png"></span>
+                <span class="texto-link">TELEGRAM</span>
             </a>
         </div>
     </div>
