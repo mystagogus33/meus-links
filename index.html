@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links</title>
     <style>
-        /* --- ÁREA DE EDIÇÃO (Mude as cores aqui) --- */
         :root {
-            --cor-fundo: #f3f4f6;
+            --cor-fundo: #f3f4f6; /* Mude o fundo aqui */
             --cor-card: #ffffff;
             --cor-texto: #111827;
             --cor-botao: #ffffff;
@@ -19,6 +18,8 @@
             background-color: var(--cor-fundo); 
             font-family: var(--fonte-principal);
             display: flex; justify-content: center; padding: 20px;
+            /* Se quiser usar a imagem de fundo que subiu, use a linha abaixo: */
+            /* background-image: url('fundo-celular.png.png'); background-size: cover; */
         }
         .container { 
             background: var(--cor-card); width: 100%; max-width: 400px;
@@ -32,9 +33,7 @@
             background: var(--cor-botao); border: 1px solid var(--cor-borda-botao);
             padding: 15px; margin-bottom: 12px; border-radius: 8px;
             text-decoration: none; color: var(--cor-texto); font-weight: bold;
-            transition: transform 0.2s;
         }
-        .link-card:active { transform: scale(0.98); }
         .link-card img { width: 30px; margin-right: 15px; }
         audio { display: none; }
     </style>
@@ -42,31 +41,35 @@
 <body>
 
     <div class="container">
-        <audio id="musica" loop autoplay>
-            <source src="musica.mp3" type="audio/mpeg">
+        <audio id="musica" loop>
+            <source src="musica.mp3.mp3" type="audio/mpeg">
         </audio>
 
         <div class="perfil">
-            <img src="foto-perfil.png" alt="Foto">
-            <h2 style="margin-bottom: 5px;">@SEU_NOME</h2>
-            <p>Seu subtítulo aqui</p>
+            <img src="fundo-computador.png.png" alt="Foto"> <h2>@MISTAGOGO33</h2>
+            <p>Canal de Mitologia</p>
         </div>
 
         <div class="links">
-            <a href="URL_DO_YOUTUBE" class="link-card">
-                <img src="icone-youtube.png"> YOUTUBE
+            <a href="COLOQUE_LINK_YOUTUBE_AQUI" class="link-card">
+                <img src="icone-youtube.png.png"> YOUTUBE
             </a>
-            <a href="URL_DO_INSTAGRAM" class="link-card">
-                <img src="icone-instagram.png"> INSTAGRAM
+            <a href="COLOQUE_LINK_TIKTOK_AQUI" class="link-card">
+                <img src="icone-tiktok.png.png"> TIKTOK
+            </a>
+            <a href="COLOQUE_LINK_TELEGRAM_AQUI" class="link-card">
+                <img src="icone-telegram.png.png"> TELEGRAM
+            </a>
+            <a href="COLOQUE_LINK_WHATSAPP_AQUI" class="link-card">
+                <img src="icone-whatsapp.png.png"> WHATSAPP
             </a>
         </div>
     </div>
 
     <script>
-        // Tenta tocar a música após o primeiro clique (navegadores bloqueiam som automático)
         document.body.addEventListener('click', () => {
             const m = document.getElementById('musica');
-            m.play();
+            m.play().catch(e => console.log("Erro ao tocar:", e));
         }, { once: true });
     </script>
 </body>
