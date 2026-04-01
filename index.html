@@ -29,15 +29,17 @@
             body { background-image: url('fundo-celular.png.png') !important; }
         }
 
+        /* CONTAINER ATUALIZADO: Fundo preto transparente e sombra profissional */
         .container { 
-            background: rgba(255, 255, 255, 0.9); 
+            background: rgba(0, 0, 0, 0.8); 
             width: 100%; 
             max-width: 400px;
             border-radius: 25px; 
-            padding: 40px 20px; 
+            padding: 45px 25px; 
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Foto de Perfil */
@@ -47,7 +49,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .perfil-foto-container img {
             width: 100%; height: 100%;
@@ -55,14 +57,29 @@
             display: block;
         }
 
-        h2 { margin-bottom: 5px; color: #111; font-size: 1.4rem; font-weight: bold; }
-        p { color: #666; font-size: 0.85rem; margin-bottom: 25px; }
+        /* TEXTOS ATUALIZADOS: Maiúsculas e Negrito */
+        h2 { 
+            margin-bottom: 5px; 
+            color: #fff; 
+            font-size: 1.5rem; 
+            font-weight: 900; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        p { 
+            color: #ccc; 
+            font-size: 0.85rem; 
+            margin-bottom: 30px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
 
         /* Lista de Links Organizada */
         .links {
             display: flex;
-            flex-direction: column; /* Coloca um abaixo do outro */
-            gap: 12px; /* Espaço entre os botões */
+            flex-direction: column;
+            gap: 12px;
         }
 
         .link-card {
@@ -75,8 +92,8 @@
             border-radius: 12px;
             text-decoration: none; 
             color: #111; 
-            font-weight: 800; /* Negrito extra para os nomes */
-            text-transform: uppercase; /* Deixa os nomes em caixa alta para mais impacto */
+            font-weight: 800; 
+            text-transform: uppercase; 
             letter-spacing: 1px;
             transition: all 0.3s ease;
             width: 100%;
@@ -84,11 +101,10 @@
 
         .link-card:hover { 
             transform: translateY(-3px); 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background: #fafafa;
+            box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+            background: #fdfdfd;
         }
         
-        /* Container do ícone (Proporção quadrada 1:1) */
         .icone-container {
             width: 28px; height: 28px;
             display: flex; 
@@ -117,8 +133,8 @@
             <div class="perfil-foto-container">
                 <img src="foto-perfil.png.png" alt="Foto"> 
             </div>
-            <h2>@MISTAGOGO33</h2>
-            <p>Canal de Mitologia</p>
+            <h2>MYSTAGOGUS.33</h2>
+            <p>CANAL DE MITOLOGIA</p>
         </div>
 
         <div class="links">
