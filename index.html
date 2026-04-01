@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Links</title>
+    <style>
+        /* --- ÁREA DE EDIÇÃO (Mude as cores aqui) --- */
+        :root {
+            --cor-fundo: #f3f4f6;
+            --cor-card: #ffffff;
+            --cor-texto: #111827;
+            --cor-botao: #ffffff;
+            --cor-borda-botao: #e5e7eb;
+            --fonte-principal: 'Arial', sans-serif;
+        }
+
+        body { 
+            background-color: var(--cor-fundo); 
+            font-family: var(--fonte-principal);
+            display: flex; justify-content: center; padding: 20px;
+        }
+        .container { 
+            background: var(--cor-card); width: 100%; max-width: 400px;
+            border-radius: 20px; padding: 40px 20px; text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .perfil img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
+        .links { margin-top: 30px; }
+        .link-card {
+            display: flex; align-items: center; justify-content: center;
+            background: var(--cor-botao); border: 1px solid var(--cor-borda-botao);
+            padding: 15px; margin-bottom: 12px; border-radius: 8px;
+            text-decoration: none; color: var(--cor-texto); font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .link-card:active { transform: scale(0.98); }
+        .link-card img { width: 30px; margin-right: 15px; }
+        audio { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <audio id="musica" loop autoplay>
+            <source src="musica.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="perfil">
+            <img src="foto-perfil.png" alt="Foto">
+            <h2 style="margin-bottom: 5px;">@SEU_NOME</h2>
+            <p>Seu subtítulo aqui</p>
+        </div>
+
+        <div class="links">
+            <a href="URL_DO_YOUTUBE" class="link-card">
+                <img src="icone-youtube.png"> YOUTUBE
+            </a>
+            <a href="URL_DO_INSTAGRAM" class="link-card">
+                <img src="icone-instagram.png"> INSTAGRAM
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Tenta tocar a música após o primeiro clique (navegadores bloqueiam som automático)
+        document.body.addEventListener('click', () => {
+            const m = document.getElementById('musica');
+            m.play();
+        }, { once: true });
+    </script>
+</body>
+</html>
