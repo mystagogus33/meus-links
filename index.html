@@ -21,7 +21,7 @@
             background-attachment: fixed;
         }
 
-        /* --- CONFIGURAÇÃO DE FUNDO DINÂMICO --- */
+        /* Fundos Dinâmicos */
         @media (min-width: 769px) {
             body { background-image: url('fundo-computador.png.png') !important; }
         }
@@ -29,9 +29,9 @@
             body { background-image: url('fundo-celular.png.png') !important; }
         }
 
-        /* --- CARTÃO CENTRAL (Mantido preto transparente e sombra premium) --- */
+        /* CONTAINER ATUALIZADO: Fundo preto transparente e sombra profissional */
         .container { 
-            background: rgba(0, 0, 0, 0.85); 
+            background: rgba(0, 0, 0, 0.8); 
             width: 100%; 
             max-width: 400px;
             border-radius: 25px; 
@@ -42,7 +42,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* --- FOTO DE PERFIL CIRCULAR --- */
+        /* Foto de Perfil */
         .perfil-foto-container {
             width: 100px; height: 100px;
             margin: 0 auto 15px auto;
@@ -57,7 +57,7 @@
             display: block;
         }
 
-        /* --- TEXTOS (Mantidos maiúsculas e negrito pesado) --- */
+        /* TEXTOS ATUALIZADOS: Maiúsculas e Negrito */
         h2 { 
             margin-bottom: 5px; 
             color: #fff; 
@@ -75,7 +75,7 @@
             letter-spacing: 1.5px;
         }
 
-        /* --- LISTA DE LINKS ORGANIZADA --- */
+        /* Lista de Links Organizada */
         .links {
             display: flex;
             flex-direction: column;
@@ -85,10 +85,10 @@
         .link-card {
             display: flex; 
             align-items: center; 
-            justify-content: center; /* Centraliza o ícone e o texto */
-            background: #fff; /* Fundo branco do botão mantido para contraste */
+            justify-content: center;
+            background: #fff; 
             border: 1px solid #e5e7eb;
-            padding: 12px 18px; /* Ajuste sutil no padding */
+            padding: 14px; 
             border-radius: 12px;
             text-decoration: none; 
             color: #111; 
@@ -105,23 +105,17 @@
             background: #fdfdfd;
         }
         
-        /* --- NOVA ESTRUTURA PARA ÍCONES CIRCULARES --- */
-        .icone-circulo {
-            width: 32px; height: 32px; /* Moldura do ícone circular */
+        .icone-container {
+            width: 28px; height: 28px;
             display: flex; 
             align-items: center; 
             justify-content: center;
-            margin-right: 15px; /* Espaço entre o ícone e o texto */
-            flex-shrink: 0; /* Impede que ele amasse */
-            border-radius: 50%; /* Torna a moldura circular */
-            border: 2px solid #111; /* Borda preta no ícone para combinar com o botão branco */
-            overflow: hidden; /* Corta o excesso */
-            background-color: #f3f3f3; /* Fundo leve para o ícone */
+            margin-right: 12px;
+            flex-shrink: 0;
         }
-        
-        .icone-circulo img {
-            width: 75%; height: 75%; /* Ícone menor dentro do círculo para respirar */
-            object-fit: contain; /* Ajusta sem distorcer */
+        .icone-container img {
+            width: 100%; height: 100%;
+            object-fit: contain;
             display: block;
         }
         
@@ -145,22 +139,22 @@
 
         <div class="links">
             <a href="https://www.youtube.com/@MYSTAGOGUS.33" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-youtube.png.png"></span> YOUTUBE
+                <span class="icone-container"><img src="icone-youtube.png.png"></span> YOUTUBE
             </a>
             <a href="https://www.instagram.com/mystagogus.oficial/" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-instagram.png.png"></span> INSTAGRAM
+                <span class="icone-container"><img src="icone-instagram.png.png"></span> INSTAGRAM
             </a>
             <a href="https://www.tiktok.com/@mystagogus.33?_t=zm-8wc5bjly3pv&_r=1" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-tiktok.png.png"></span> TIKTOK
+                <span class="icone-container"><img src="icone-tiktok.png.png"></span> TIKTOK
             </a>
             <a href="https://www.facebook.com/profile.php?id=61585818361463" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-facebook.png.png"></span> FACEBOOK
+                <span class="icone-container"><img src="icone-facebook.png.png"></span> FACEBOOK
             </a>
             <a href="https://www.whatsapp.com/channel/0029Vb67Cr5GehEP6aKhr61j" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-whatsapp.png.png"></span> WHATSAPP
+                <span class="icone-container"><img src="icone-whatsapp.png.png"></span> WHATSAPP
             </a>
             <a href="https://t.me/MYSTAGOGUS33" target="_blank" class="link-card">
-                <span class="icone-circulo"><img src="icone-telegram.png.png"></span> TELEGRAM
+                <span class="icone-container"><img src="icone-telegram.png.png"></span> TELEGRAM
             </a>
         </div>
     </div>
