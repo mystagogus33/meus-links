@@ -3,38 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
+    <title>Meus Links | Mystagogus33</title>
     <style>
         :root {
-            --cor-fundo: #f3f4f6; /* Mude o fundo aqui */
-            --cor-card: #ffffff;
+            /* O fundo agora é imagem, então a cor-fundo vira um reserva */
+            --cor-fundo: #000000; 
+            --cor-card: rgba(255, 255, 255, 0.85); /* Branco com transparência */
             --cor-texto: #111827;
             --cor-botao: #ffffff;
             --cor-borda-botao: #e5e7eb;
             --fonte-principal: 'Arial', sans-serif;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body { 
-            background-color: var(--cor-fundo); 
             font-family: var(--fonte-principal);
-            display: flex; justify-content: center; padding: 20px;
-            /* Se quiser usar a imagem de fundo que subiu, use a linha abaixo: */
-            /* background-image: url('fundo-celular.png.png'); background-size: cover; */
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: var(--cor-fundo);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
         }
+
+        /* --- CONFIGURAÇÃO DE FUNDO DINÂMICO --- */
+        
+        /* Imagem para COMPUTADOR */
+        @media (min-width: 769px) {
+            body {
+                background-image: url('fundo-computador.png.png');
+            }
+        }
+
+        /* Imagem para CELULAR */
+        @media (max-width: 768px) {
+            body {
+                background-image: url('fundo-celular.png.png');
+            }
+        }
+
         .container { 
-            background: var(--cor-card); width: 100%; max-width: 400px;
-            border-radius: 20px; padding: 40px 20px; text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: var(--cor-card); 
+            width: 100%; 
+            max-width: 400px;
+            border-radius: 20px; 
+            padding: 40px 20px; 
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px); /* Efeito de vidro no fundo do card */
         }
-        .perfil img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
+
+        .perfil img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
         .links { margin-top: 30px; }
+        
         .link-card {
             display: flex; align-items: center; justify-content: center;
             background: var(--cor-botao); border: 1px solid var(--cor-borda-botao);
             padding: 15px; margin-bottom: 12px; border-radius: 8px;
             text-decoration: none; color: var(--cor-texto); font-weight: bold;
+            transition: 0.3s ease;
         }
-        .link-card img { width: 30px; margin-right: 15px; }
+
+        .link-card:hover { transform: scale(1.03); background: #f9fafb; }
+        .link-card img { width: 28px; margin-right: 15px; }
+        
         audio { display: none; }
     </style>
 </head>
@@ -46,35 +83,38 @@
         </audio>
 
         <div class="perfil">
-            <img src="foto-perfil.png.png" alt="Foto"> <h2>@MISTAGOGO33</h2>
-            <p>Canal de Mitologia</p>
+            <img src="foto-perfil.png.png" alt="Foto"> 
+            <h2 style="margin-top: 15px;">@MISTAGOGO33</h2>
+            <p style="color: #4b5563; font-size: 0.9em;">Canal de Mitologia</p>
         </div>
 
         <div class="links">
-            <a href="https://www.youtube.com/@MYSTAGOGUS.33" class="link-card">
+            <a href="https://www.youtube.com/@MYSTAGOGUS.33" target="_blank" class="link-card">
                 <img src="icone-youtube.png.png"> YOUTUBE
             </a>
-            <a href="https://www.instagram.com/mystagogus.oficial/" class="link-card">
+            <a href="https://www.instagram.com/mystagogus.oficial/" target="_blank" class="link-card">
                 <img src="icone-instagram.png.png"> INSTAGRAM
             </a>
-            <a href="https://www.tiktok.com/@mystagogus.33?_t=zm-8wc5bjly3pv&_r=1" class="link-card">
+            <a href="https://www.tiktok.com/@mystagogus.33?_t=zm-8wc5bjly3pv&_r=1" target="_blank" class="link-card">
                 <img src="icone-tiktok.png.png"> TIKTOK
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61585818361463" class="link-card">
+            <a href="https://www.facebook.com/profile.php?id=61585818361463" target="_blank" class="link-card">
                 <img src="icone-facebook.png.png"> FACEBOOK
             </a>
-            <a href="https://www.whatsapp.com/channel/0029Vb67Cr5GehEP6aKhr61j" class="link-card">
+            <a href="https://www.whatsapp.com/channel/0029Vb67Cr5GehEP6aKhr61j" target="_blank" class="link-card">
                 <img src="icone-whatsapp.png.png"> WHATSAPP
             </a>
-             <a href="https://t.me/MYSTAGOGUS33" class="link-card">
+            <a href="https://t.me/MYSTAGOGUS33" target="_blank" class="link-card">
                 <img src="icone-telegram.png.png"> TELEGRAM
+            </a>
         </div>
     </div>
 
     <script>
+        // Inicia a música no primeiro toque na tela
         document.body.addEventListener('click', () => {
             const m = document.getElementById('musica');
-            m.play().catch(e => console.log("Erro ao tocar:", e));
+            m.play().catch(e => console.log("Aguardando interação para áudio."));
         }, { once: true });
     </script>
 </body>
